@@ -6,7 +6,7 @@ export const state = () => ({
       info: "A completely bespoke site for an esports team, harnessing Shopify's Storefront API to power an integrated ecommerce store.",
       technologies: ['Vue', 'Nuxt', 'Shopify Storefront API', 'Strapi'],
       url: 'https://shusmoneycrew.com',
-      offset: 10,
+      offset: -10,
       // textClass: 'text-white',
       // bgClass: 'bg-gray-800',
       // highlightClass: 'bg-smc-400',
