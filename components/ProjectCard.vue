@@ -76,7 +76,7 @@ export default {
 
 <style>
 .project-card {
-  @apply mx-auto my-16 mt-80 xl:my-40 xl:mt-56 rounded-md text-white bg-gray-800;
+  @apply mx-auto my-16 mt-72 xl:my-40 xl:mt-56 rounded-md text-white bg-gray-800;
   max-width: 90rem;
 }
 
