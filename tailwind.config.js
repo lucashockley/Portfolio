@@ -21,15 +21,5 @@ module.exports = {
       },
     },
   },
-  purge: {
-    safelist: [
-      'aos-init',
-      'aos-animate',
-      'data-aos-delay',
-      'data-aos-duration',
-      'fade-in',
-      'fade-up',
-      'vsc-initialized',
-    ],
-  },
+  darkMode: 'class',
 };

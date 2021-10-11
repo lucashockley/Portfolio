@@ -24,17 +24,6 @@ export default {
 
   plugins: [{ src: '~/plugins/aos.js', mode: 'client' }],
 
-  purgeCSS: {
-    whitelist: [
-      'aos-init',
-      'aos-animate',
-      'data-aos-delay',
-      'data-aos-duration',
-      'fade-up',
-      'fade-in',
-    ],
-  },
-
   webfontloader: {
     google: {
       families: ['Rubik:300,400,500,600,700,800'],
