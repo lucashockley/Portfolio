@@ -1,5 +1,5 @@
 <template>
-  <div data-aos="fade-up" class="project-card" :class="project.bgClass">
+  <div data-aos="fade-up" class="project-card">
     <div class="contents-container" :class="{ 'xl:flex-row-reverse': !right }">
       <div class="screenshot-window" :class="right ? 'right xl:ml-4' : 'left xl:-ml-4'">
         <div class="window-bar">
@@ -44,7 +44,7 @@
           <a
             :href="project.url"
             target="_blank"
-            class="btn bg-blue-500 hover:bg-blue-600 inline-block w-max mt-2"
+            class="btn bg-blue-500 hover:bg-blue-600 text-white inline-block w-max mt-2"
             >Visit the Site</a
           >
           <a
@@ -76,7 +76,7 @@ export default {
 
 <style>
 .project-card {
-  @apply mx-auto my-16 mt-80 xl:my-40 xl:mt-56 rounded-md;
+  @apply mx-auto my-16 mt-80 xl:my-40 xl:mt-56 rounded-md text-white bg-gray-800;
   max-width: 90rem;
 }
 

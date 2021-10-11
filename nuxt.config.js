@@ -2,7 +2,7 @@ export default {
   target: 'static',
 
   head: {
-    title: 'portfolio',
+    title: 'Lucas Hockley',
     htmlAttrs: {
       lang: 'en',
     },

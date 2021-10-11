@@ -8,10 +8,6 @@ module.exports = {
         blue: colors.lightBlue,
         gray: colors.trueGray,
         green: colors.green,
-        smc: {
-          400: '#ff3870',
-          500: '#fa054c',
-        }
       },
       height: {
         over: '120%',
