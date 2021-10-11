@@ -1,5 +1,5 @@
 <template>
-  <header class="text-center z-20 p-10 bg-white w-full xl:text-right">
+  <header class="text-center z-20 p-6 bg-white w-full xl:text-right">
     <nav>
       <nuxt-link to="/">Home</nuxt-link>
       <nuxt-link to="/projects">Projects</nuxt-link>
