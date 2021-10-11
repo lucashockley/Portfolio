@@ -1,5 +1,9 @@
 <template>
-  <div data-aos="fade-up" class="project-card">
+  <div
+    data-aos="fade-up"
+    :data-aos-offset="project.offset ? project.offset : 100"
+    class="project-card"
+  >
     <div class="contents-container" :class="{ 'xl:flex-row-reverse': !right }">
       <div class="screenshot-window" :class="right ? 'right xl:ml-4' : 'left xl:-ml-4'">
         <div class="window-bar">
