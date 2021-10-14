@@ -7,6 +7,7 @@
           <div class="mac-window-icon bg-yellow-400"></div>
           <div class="mac-window-icon bg-green-400"></div>
         </div>
+
         <a :href="project.url" target="_blank">
           <div class="h-full bg-gray-900 w-full rounded-b absolute z-0"></div>
 
@@ -55,9 +56,6 @@
             >View the Source</a
           >
         </div>
-        <!-- <nuxt-link :to="`/projects/${project.slug}`" class="duration-200 hover:text-gray-300"
-          >More about this project</nuxt-link
-        > -->
       </div>
     </div>
   </div>
@@ -90,7 +88,7 @@ export default {
 }
 
 .window-bar {
-  @apply bg-gray-700 h-5 rounded-t flex items-center pl-1.5 duration-300;
+  @apply bg-gray-700 h-5 rounded-t flex items-center pl-2 duration-300;
 }
 
 .screenshot-window:hover > .window-bar {
@@ -106,7 +104,7 @@ export default {
 }
 
 .mac-window-icon {
-  @apply h-1.5 w-1.5 rounded-full mx-1 bg-gray-400;
+  @apply h-1.5 w-1.5 rounded-full mr-1.5;
 }
 
 @media only screen and (min-width: 1280px) {

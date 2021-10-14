@@ -18,13 +18,7 @@
   @apply bg-white hover:bg-gray-100 text-black;
 }
 
-.fade-slide-enter-active,
-.fade-slide-leave-active {
-  @apply transition-all duration-500;
-}
-
-.fade-slide-enter,
-.fade-slide-leave-to {
-  @apply opacity-0 transform-gpu translate-y-10;
+.text-container {
+  @apply max-w-2xl mx-auto;
 }
 </style>
