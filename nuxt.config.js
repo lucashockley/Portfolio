@@ -14,7 +14,7 @@ export default {
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
 
-  css: ['@assets/css/main.css', 'aos/dist/aos.css'],
+  css: ['aos/dist/aos.css'],
 
   components: true,
 

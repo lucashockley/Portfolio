@@ -1,5 +1,5 @@
 <template>
-  <main class="mx-auto w-4/5 md:w-1/2 xl:pt-48 pt-12 mb-24">
+  <main class="home-content">
     <div data-aos="fade-up">
       <div class="text-2xl md:text-3xl max-w-4xl">
         <h1
@@ -11,11 +11,6 @@
         >
           👋
         </h1>
-        <!-- <div class="h-16 xl:h-20 relative">
-          <transition name="fade-slide" appear>
-            <h1 class="text-4xl absolute" v-show="mounted">👋</h1>
-          </transition>
-        </div> -->
 
         <h1 class="font-medium my-4">My name is Lucas Hockley!</h1>
 
@@ -33,15 +28,9 @@
   </main>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      mounted: false,
-    };
-  },
-  mounted() {
-    this.mounted = true;
-  },
-};
-</script>
+<style>
+.home-content {
+  @apply mx-auto w-4/5 md:w-1/2 flex items-center;
+  min-height: 65vh;
+}
+</style>
