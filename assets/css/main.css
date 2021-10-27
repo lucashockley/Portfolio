@@ -39,6 +39,7 @@ button {
   @apply text-center text-3xl font-medium py-6 xl:py-8;
 }
 
+#home,
 #projects,
 #about,
 #contact {
