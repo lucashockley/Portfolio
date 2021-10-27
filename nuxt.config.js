@@ -14,11 +14,13 @@ export default {
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
 
-  css: ['aos/dist/aos.css'],
+  css: ['~/assets/css/main.css', 'aos/dist/aos.css'],
 
   components: true,
 
-  buildModules: ['@nuxtjs/tailwindcss'],
+  loading: false,
+
+  buildModules: ['@nuxtjs/tailwindcss', '@nuxtjs/color-mode'],
 
   modules: ['@nuxtjs/axios', 'nuxt-webfontloader'],
 
@@ -28,5 +30,9 @@ export default {
     google: {
       families: ['Rubik:300,400,500,600,700,800'],
     },
+  },
+
+  colorMode: {
+    classSuffix: '',
   },
 };

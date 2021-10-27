@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons+Round');
+
+html {
+  overflow: overlay;
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply dark:bg-gray-900 dark:text-white;
+  transition: all 300ms;
+  transition-property: background-color, border-color, color;
+}
+
+section {
+  @apply w-10/12 m-auto mb-24 xl:mb-72;
+}
+
+button {
+  @apply outline-none focus:outline-none;
+}
+
+.btn {
+  @apply duration-300 py-3 px-5 rounded;
+}
+
+.btn-primary {
+  @apply text-white bg-blue-400 hover:bg-blue-500 dark:bg-blue-500 dark:hover:bg-blue-600;
+}
+
+.btn-secondary {
+  @apply bg-white dark:bg-gray-900 hover:bg-gray-100 dark:hover:bg-gray-800 text-black dark:text-white;
+}
+
+.text-container {
+  @apply max-w-2xl mx-auto my-4 px-4;
+}
+
+.section-title {
+  @apply text-center text-3xl font-medium py-6 xl:py-8;
+}
+
+#projects,
+#about,
+#contact {
+  padding-top: 8rem;
+}
+
+::-webkit-scrollbar {
+  @apply w-6;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 dark:bg-gray-600 rounded-full duration-300;
+  background-clip: padding-box;
+  border: solid 9px rgba(0, 0, 0, 0);
+}
+
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 200ms;
+}
+
+.page-enter,
+.page-leave-active {
+  opacity: 0;
+}

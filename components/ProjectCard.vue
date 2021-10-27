@@ -1,5 +1,5 @@
 <template>
-  <div data-aos="fade-up" :data-aos-offset="project.offset" class="project-card">
+  <div data-aos="fade-up" class="project-card">
     <div class="contents-container" :class="{ 'xl:flex-row-reverse': !right }">
       <div class="screenshot-window" :class="right ? 'right xl:ml-4' : 'left xl:-ml-4'">
         <div class="window-bar">
@@ -39,22 +39,27 @@
         </p>
 
         <div
-          class="flex justify-center xl:justify-start flex-wrap mt-8 xl:mt-4"
+          class="flex justify-center flex-col items-center xl:justify-start flex-wrap mt-8 xl:mt-4"
           :class="right ? 'xl:flex-row-reverse' : 'xl:flex-row'"
         >
-          <a
-            :href="project.url"
-            target="_blank"
-            class="btn bg-blue-500 hover:bg-blue-600 text-white inline-block w-max mt-2"
-            >Visit the Site</a
-          >
-          <a
-            v-if="project.source"
-            :href="project.source"
-            target="_blank"
-            class="btn hover:bg-gray-900 inline-block w-max mt-2 mx-4"
-            >View the Source</a
-          >
+          <span data-aos="fade-up" data-aos-delay="100" data-aos-offset="20">
+            <a
+              :href="project.url"
+              target="_blank"
+              class="btn bg-blue-500 hover:bg-blue-600 text-white inline-block w-max mt-2"
+              >Visit the Site</a
+            >
+          </span>
+
+          <span data-aos="fade-up" data-aos-delay="200" data-aos-offset="20">
+            <a
+              v-if="project.source"
+              :href="project.source"
+              target="_blank"
+              class="btn hover:bg-gray-700 inline-block w-max mt-4 xl:mt-2 mx-4"
+              >View the Source</a
+            >
+          </span>
         </div>
       </div>
     </div>

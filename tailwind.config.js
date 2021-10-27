@@ -5,6 +5,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        success: '#42c236',
         blue: colors.lightBlue,
         gray: colors.trueGray,
         green: colors.green,
