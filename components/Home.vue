@@ -1,7 +1,7 @@
 <template>
   <div id="home">
     <div data-aos="fade-up">
-      <div class="text-2xl md:text-3xl max-w-3xl -mt-24">
+      <div class="text-2xl md:text-3xl max-w-3xl xl:-mt-24">
         <h1
           @mouseenter="animateWave = true"
           :class="{ wave: animateWave }"
