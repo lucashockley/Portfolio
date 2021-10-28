@@ -8,7 +8,7 @@
           <div class="mac-window-icon bg-green-400"></div>
         </div>
 
-        <a :href="project.url" target="_blank">
+        <a :href="project.url" target="_blank" rel="noopener">
           <div class="h-full bg-gray-900 w-full rounded-b absolute z-0"></div>
 
           <transition name="fade">
