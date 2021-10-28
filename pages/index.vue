@@ -19,6 +19,13 @@
 export default {
   head() {
     return {
+      link: [
+        {
+          rel: 'icon',
+          type: 'image/x-icon',
+          href: this.$colorMode.value === 'light' ? '/light-favicon.ico' : '/dark-favicon.ico',
+        },
+      ],
       meta: [
         {
           hid: 'description',
