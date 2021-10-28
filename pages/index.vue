@@ -23,7 +23,7 @@ export default {
         {
           rel: 'icon',
           type: 'image/x-icon',
-          href: this.$colorMode.value === 'light' ? '/light-favicon.ico' : '/dark-favicon.ico',
+          href: this.colorModeValue === 'light' ? '/light-favicon.ico' : '/dark-favicon.ico',
         },
       ],
       meta: [
@@ -34,6 +34,17 @@ export default {
         },
       ],
     };
+  },
+  watch: {
+    colorModeValue() {
+      let faviconLink = document.querySelector("link[rel~='icon']");
+      faviconLink.href = `/${this.colorModeValue}-favicon.ico`;
+    },
+  },
+  computed: {
+    colorModeValue() {
+      return this.$colorMode.value;
+    },
   },
   data() {
     return {
