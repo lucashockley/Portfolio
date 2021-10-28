@@ -12,7 +12,7 @@ body {
 }
 
 section {
-  @apply w-10/12 m-auto mb-24 xl:mb-72;
+  @apply w-10/12 m-auto pt-16 mb-24 xl:mb-72;
 }
 
 button {
@@ -37,13 +37,6 @@ button {
 
 .section-title {
   @apply text-center text-3xl font-medium py-6 xl:py-8;
-}
-
-#home,
-#projects,
-#about,
-#contact {
-  padding-top: 8rem;
 }
 
 ::-webkit-scrollbar {
