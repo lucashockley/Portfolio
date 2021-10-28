@@ -36,7 +36,7 @@
             </transition>
           </label>
 
-          <input v-model="formData.name" type="text" id="name" class="input" />
+          <input v-model="formData.name" name="name" type="text" id="name" class="input" />
         </div>
 
         <div>
@@ -62,7 +62,7 @@
             </transition>
           </label>
 
-          <input v-model="formData.email" type="text" id="email" class="input" />
+          <input v-model="formData.email" type="text" name="email" id="email" class="input" />
         </div>
 
         <div>

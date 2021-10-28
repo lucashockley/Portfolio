@@ -27,13 +27,15 @@
       <div data-aos="fade-up">
         <p class="py-6 text-center">Below are some of the technologies I use on a regular basis.</p>
 
-        <div class="flex justify-center items-center flex-wrap gap-2 max-w-xl mx-auto py-6">
+        <div
+          class="flex justify-center items-center flex-wrap gap-2 max-w-xl mx-auto py-6 text-white"
+        >
           <div
             v-for="(technology, index) in technologies"
             data-aos="fade-up"
             :data-aos-delay="index * 150"
             :key="technology"
-            class="text-white bg-gray-800 py-2 px-4 rounded duration-300"
+            class="bg-gray-800 py-2 px-4 rounded"
           >
             {{ technology }}
           </div>
