@@ -91,6 +91,10 @@
         Send
       </button>
     </form>
+
+    <button @click="addNotification({ content: 'asdfasdfasdfasdf asdf asdf asdf asdf asdfasd' })">
+      Add
+    </button>
   </section>
 </template>
 

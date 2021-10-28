@@ -1,8 +1,12 @@
 <template>
   <main>
-    <Notifications :notifications="notifications" :removeNotification="removeNotification" />
+    <Notifications
+      ref="notis"
+      :notifications="notifications"
+      :removeNotification="removeNotification"
+    />
 
-    <Navigation />
+    <NewNavigation ref="header" />
 
     <Home />
     <Projects />
@@ -16,6 +20,23 @@ export default {
   data() {
     return {
       notifications: [],
+    };
+  },
+  mounted() {
+    let scrollPosition = window.scrollY;
+
+    window.onscroll = () => {
+      let newScrollPosition = window.scrollY;
+
+      if (scrollPosition > newScrollPosition) {
+        this.$refs.header.$el.style.top = '0';
+        this.$refs.notis.$el.style.top = '80px';
+      } else {
+        this.$refs.header.$el.style.top = '-25%';
+        this.$refs.notis.$el.style.top = '0';
+      }
+
+      scrollPosition = newScrollPosition;
     };
   },
   methods: {

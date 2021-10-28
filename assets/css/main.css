@@ -20,7 +20,7 @@ button {
 }
 
 .btn {
-  @apply duration-300 py-3 px-5 rounded;
+  @apply duration-300 py-3 px-5 rounded whitespace-nowrap;
 }
 
 .btn-primary {

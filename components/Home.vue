@@ -17,14 +17,14 @@
 
         <div data-aos="fade-up" data-aos-delay="200">
           <h1 class="text-xl py-2 text-gray-600 dark:text-gray-300">
-            I'm a full stack web developer from the UK, who enjoys making beautiful and interesting
-            things for the web. Currently I'm studying Computer Science at the University of Leeds.
+            I'm a full stack web developer from the UK, who enjoys making interesting things for the
+            web. Currently I'm studying computer science at the University of Leeds.
           </h1>
         </div>
       </div>
 
-      <div class="my-14" data-aos="fade-up" data-aos-delay="300">
-        <a href="#projects" class="btn btn-primary mr-3">Projects</a>
+      <div class="my-14 flex flex-wrap gap-3" data-aos="fade-up" data-aos-delay="300">
+        <a href="#projects" class="btn btn-primary">Projects</a>
         <a href="#contact" class="btn btn-secondary">Contact Me</a>
       </div>
     </div>

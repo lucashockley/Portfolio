@@ -1,5 +1,5 @@
 <template>
-  <transition-group name="slide" tag="div" class="fixed z-10 select-none top-20 w-full">
+  <transition-group name="slide" tag="div" class="fixed z-10 select-none w-full duration-300">
     <div
       v-for="notification in notifications.slice().reverse()"
       :key="notification.id"
