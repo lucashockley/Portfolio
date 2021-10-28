@@ -17,6 +17,18 @@
 
 <script>
 export default {
+  head() {
+    return {
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: `Hi! My name's Lucas Hockley. I'm a full stack web developer from the UK, who enjoys making interesting things for the
+            web. Currently I'm studying computer science at the University of Leeds.`,
+        },
+      ],
+    };
+  },
   data() {
     return {
       notifications: [],

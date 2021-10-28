@@ -40,7 +40,7 @@ export default {
           info: 'A web implementation of the board game Othello, featuing an AI opponent utilising minimax and alpha-beta pruning.',
           technologies: ['HTML', 'CSS', 'JavaScript'],
           url: 'https://othell.io/',
-          source: 'https://github.com/lucashockley/Othell.io',
+          // source: 'https://github.com/lucashockley/Othell.io',
         },
       ],
     };

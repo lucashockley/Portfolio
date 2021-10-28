@@ -16,7 +16,7 @@
               v-show="loaded"
               class="h-full object-cover w-full rounded-b z-10 absolute"
               @load="loaded = true"
-              :src="`/img/ProjectPreviews/${project.slug}-screenshot.png`"
+              :src="require(`~/assets/img/${project.slug}-screenshot.png`)"
               alt="Project Screenshot"
             />
           </transition>
@@ -46,6 +46,7 @@
             <a
               :href="project.url"
               target="_blank"
+              rel="noopener"
               class="btn bg-blue-500 hover:bg-blue-600 text-white inline-block w-max mt-2"
               >Visit the Site</a
             >
@@ -56,6 +57,7 @@
               v-if="project.source"
               :href="project.source"
               target="_blank"
+              rel="noopener"
               class="btn hover:bg-gray-700 inline-block w-max mt-4 xl:mt-2 mx-4"
               >View the Source</a
             >
