@@ -28,7 +28,7 @@ export default {
 
   webfontloader: {
     google: {
-      families: ['Rubik:300,400,500,600,700,800'],
+      families: ['Rubik:300,400,500,600,700,800', 'Material Icons Round'],
     },
   },
 
