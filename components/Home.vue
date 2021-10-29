@@ -1,7 +1,7 @@
 <template>
   <div id="home">
     <div data-aos="fade-up">
-      <div class="text-2xl md:text-3xl max-w-3xl xl:-mt-44">
+      <div class="text-2xl md:text-3xl max-w-3xl">
         <h1
           @mouseenter="animateWave = true"
           :class="{ wave: animateWave }"
@@ -56,7 +56,7 @@ export default {
 
 <style>
 #home {
-  @apply mx-auto w-4/5 md:w-1/2 flex items-center;
+  @apply mx-auto w-4/5 md:w-1/2 flex items-center pt-24 py-28;
   min-height: 100vh;
 }
 
