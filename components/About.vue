@@ -17,10 +17,10 @@
         </p>
 
         <p data-aos="fade-up">
-          I still do all of the boring stuff too, though! I've built tailored backend services from
-          the ground up, but I've also used content management systems that make for easily editable
-          web pages. When it comes to deploying a site I'll often use static generation with Netlify
-          for the frontend, and if I need to host an Express API, I'll stick it in a VPS with NGINX.
+          In terms of the backend, I've built tailored Express APIs from the ground up, but I've
+          also used content management systems that make for easily editable web pages. When it
+          comes to deploying a site I'll often use static generation with Netlify for the frontend,
+          and if I need to host an API, I'll usually stick it on a VPS from Digital Ocean.
         </p>
       </div>
 
@@ -33,7 +33,7 @@
           <div
             v-for="(technology, index) in technologies"
             data-aos="fade-up"
-            :data-aos-delay="index * 150"
+            :data-aos-delay="index * 100"
             :key="technology"
             class="bg-gray-800 py-2 px-4 rounded"
           >

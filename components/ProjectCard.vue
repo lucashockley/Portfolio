@@ -3,9 +3,9 @@
     <div class="contents-container" :class="{ 'xl:flex-row-reverse': !right }">
       <div class="screenshot-window" :class="right ? 'right xl:ml-4' : 'left xl:-ml-4'">
         <div class="window-bar">
-          <div class="mac-window-icon bg-red-500"></div>
-          <div class="mac-window-icon bg-yellow-400"></div>
-          <div class="mac-window-icon bg-green-400"></div>
+          <div class="mac-window-icon"></div>
+          <div class="mac-window-icon"></div>
+          <div class="mac-window-icon"></div>
         </div>
 
         <a :href="project.url" target="_blank" rel="noopener">
@@ -102,6 +102,10 @@ export default {
   @apply bg-gray-500;
 }
 
+.screenshot-window:hover > .window-bar > .mac-window-icon {
+  @apply bg-gray-400;
+}
+
 .screenshot-window.left {
   @apply xl:left-0;
 }
@@ -111,7 +115,7 @@ export default {
 }
 
 .mac-window-icon {
-  @apply h-1.5 w-1.5 rounded-full mr-1.5;
+  @apply h-1.5 w-1.5 rounded-full mr-1.5 bg-gray-500 duration-300;
 }
 
 @media only screen and (min-width: 1280px) {
