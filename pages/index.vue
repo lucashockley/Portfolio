@@ -6,7 +6,7 @@
       :removeNotification="removeNotification"
     />
 
-    <NewNavigation ref="header" />
+    <Navigation ref="header" />
 
     <Home />
     <Projects />

@@ -1,8 +1,17 @@
 <template>
-  <nav>
-    <a v-for="link in links" :key="link.href" :href="link.href">{{ link.emoji }}</a>
+  <header>
     <ThemeToggle />
-  </nav>
+
+    <nav class="px-5 flex flex-wrap justify-center items-center gap-2 text-gray-500">
+      <a
+        v-for="link in links"
+        :key="link.href"
+        :href="link.href"
+        class="hover:text-black dark:hover:text-white duration-200 px-2"
+        >{{ link.title }}</a
+      >
+    </nav>
+  </header>
 </template>
 
 <script>
@@ -10,10 +19,9 @@ export default {
   data() {
     return {
       links: [
-        { href: '#home', emoji: '👋', tooltip: 'Home' },
-        { href: '#projects', emoji: '🖥️', tooltip: 'Projects' },
-        { href: '#about', emoji: '🎓', tooltip: 'About' },
-        { href: '#contact', emoji: '✉️', tooltip: 'Contact' },
+        { href: '#projects', title: 'Work' },
+        { href: '#about', title: 'About' },
+        { href: '#contact', title: 'Contact' },
       ],
     };
   },
@@ -21,8 +29,7 @@ export default {
 </script>
 
 <style>
-nav {
-  @apply fixed select-none flex items-center justify-center xl:justify-end flex-wrap gap-4 w-full py-6 px-9 z-30 bg-white dark:bg-gray-900 border-b-2 border-gray-100 dark:border-gray-800 duration-300;
-  font-size: 1.4rem;
+header {
+  @apply select-none flex justify-center md:justify-between gap-3 items-center p-8 fixed w-full z-50 bg-white dark:bg-gray-900 top-0 flex-wrap duration-300;
 }
 </style>
