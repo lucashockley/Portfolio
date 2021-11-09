@@ -1,12 +1,15 @@
 <template>
   <main>
+    <header ref="header">
+      <ThemeToggle />
+      <Navigation />
+    </header>
+
     <Notifications
-      ref="notis"
+      ref="notifications"
       :notifications="notifications"
       :removeNotification="removeNotification"
     />
-
-    <Navigation ref="header" />
 
     <Home />
     <Projects />
@@ -58,11 +61,11 @@ export default {
       let newScrollPosition = window.scrollY;
 
       if (scrollPosition > newScrollPosition) {
-        this.$refs.header.$el.style.top = '0';
-        this.$refs.notis.$el.style.top = '80px';
+        this.$refs.header.style.top = '0';
+        this.$refs.notifications.$el.style.top = '80px';
       } else {
-        this.$refs.header.$el.style.top = '-25%';
-        this.$refs.notis.$el.style.top = '0';
+        this.$refs.header.style.top = '-25%';
+        this.$refs.notifications.$el.style.top = '0';
       }
 
       scrollPosition = newScrollPosition;
@@ -83,3 +86,9 @@ export default {
   },
 };
 </script>
+
+<style>
+header {
+  @apply select-none flex justify-center md:justify-between gap-3 items-center p-8 fixed w-full z-50 bg-white dark:bg-gray-900 top-0 flex-wrap duration-300;
+}
+</style>
