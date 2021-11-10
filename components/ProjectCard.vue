@@ -1,27 +1,7 @@
 <template>
-  <div data-aos="fade-up" class="project-card">
+  <div data-aos="fade-up" class="project-card" :id="project.slug">
     <div class="contents-container" :class="{ 'xl:flex-row-reverse': !right }">
-      <div class="screenshot-window" :class="right ? 'right xl:ml-4' : 'left xl:-ml-4'">
-        <div class="window-bar">
-          <div class="mac-window-icon"></div>
-          <div class="mac-window-icon"></div>
-          <div class="mac-window-icon"></div>
-        </div>
-
-        <a :href="project.url" target="_blank" rel="noopener">
-          <div class="h-full bg-gray-900 w-full rounded-b absolute z-0"></div>
-
-          <transition name="fade">
-            <img
-              v-show="loaded"
-              class="h-full object-cover w-full rounded-b z-10 absolute"
-              @load="loaded = true"
-              :src="require(`~/assets/img/${project.slug}-screenshot.png`)"
-              alt="Project Screenshot"
-            />
-          </transition>
-        </a>
-      </div>
+      <ProjectCardPreviewWindow :project="project" :right="right" />
 
       <div
         class="xl:w-1/2 w-full px-8 py-14 xl:py-16 xl:px-12 text-left"
@@ -39,10 +19,10 @@
         </p>
 
         <div
-          class="flex justify-center flex-col items-center xl:justify-start flex-wrap mt-8 xl:mt-4"
+          class="flex justify-center items-center xl:justify-start flex-wrap mt-8 xl:mt-4"
           :class="right ? 'xl:flex-row-reverse' : 'xl:flex-row'"
         >
-          <span data-aos="fade-up" data-aos-delay="100" data-aos-offset="20">
+          <span data-aos="fade-up" data-aos-delay="50" :data-aos-anchor="`#${project.slug}`">
             <a
               :href="project.url"
               target="_blank"
@@ -52,13 +32,13 @@
             >
           </span>
 
-          <span data-aos="fade-up" data-aos-delay="200" data-aos-offset="20">
+          <span data-aos="fade-up" data-aos-delay="100" :data-aos-anchor="`#${project.slug}`">
             <a
               v-if="project.source"
               :href="project.source"
               target="_blank"
               rel="noopener"
-              class="btn hover:bg-gray-700 inline-block w-max mt-4 xl:mt-2 mx-4"
+              class="btn hover:bg-gray-700 inline-block w-max mt-2 mx-2"
               >View the Source</a
             >
           </span>
@@ -70,11 +50,6 @@
 
 <script>
 export default {
-  data() {
-    return {
-      loaded: false,
-    };
-  },
   props: ['project', 'right'],
 };
 </script>
@@ -88,51 +63,5 @@ export default {
 .contents-container {
   @apply w-10/12 m-auto flex pt-16 xl:pt-0 relative;
   perspective: 1200px;
-}
-
-.screenshot-window {
-  @apply -top-52 xl:-top-3/20 w-full max-w-lg xl:max-w-full left-1/2 transform -translate-x-1/2 xl:translate-x-0 absolute duration-300 h-64 xl:h-over xl:w-1/2 z-10;
-}
-
-.window-bar {
-  @apply bg-gray-700 h-5 rounded-t flex items-center pl-2 duration-300;
-}
-
-.screenshot-window:hover > .window-bar {
-  @apply bg-gray-500;
-}
-
-.screenshot-window:hover > .window-bar > .mac-window-icon {
-  @apply bg-gray-400;
-}
-
-.screenshot-window.left {
-  @apply xl:left-0;
-}
-
-.screenshot-window.right {
-  @apply xl:right-0;
-}
-
-.mac-window-icon {
-  @apply h-1.5 w-1.5 rounded-full mr-1.5 bg-gray-500 duration-300;
-}
-
-@media only screen and (min-width: 1280px) {
-  .screenshot-window.left {
-    transform: rotateY(6deg);
-  }
-
-  .screenshot-window.right {
-    transform: rotateY(-6deg);
-  }
-
-  .screenshot-window.left:hover {
-    transform: rotateY(11deg);
-  }
-
-  .screenshot-window.right:hover {
-    transform: rotateY(-11deg);
-  }
 }
 </style>
