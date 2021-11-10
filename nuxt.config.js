@@ -33,6 +33,7 @@ export default {
   },
 
   colorMode: {
+    preference: 'dark',
     classSuffix: '',
   },
 };
