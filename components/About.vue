@@ -35,9 +35,21 @@
             data-aos="fade-up"
             :data-aos-delay="index * 100"
             :key="technology"
-            class="bg-gray-800 py-2 px-4 rounded"
           >
-            {{ technology }}
+            <div
+              class="
+                bg-gray-100
+                dark:bg-gray-800
+                py-2
+                px-4
+                rounded
+                duration-300
+                text-gray-600
+                dark:text-white
+              "
+            >
+              {{ technology }}
+            </div>
           </div>
         </div>
       </div>

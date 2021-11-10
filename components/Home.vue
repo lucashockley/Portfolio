@@ -16,10 +16,10 @@
         </div>
 
         <div data-aos="fade-up" data-aos-delay="200">
-          <h1 class="text-xl py-2 text-gray-600 dark:text-gray-300">
+          <p class="text-xl py-2 text-gray-500 dark:text-gray-300 duration-300">
             I'm a full stack web developer from the UK, who enjoys making interesting things for the
             web. Currently I'm studying computer science at the University of Leeds.
-          </h1>
+          </p>
         </div>
       </div>
 
