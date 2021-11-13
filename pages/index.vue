@@ -38,21 +38,21 @@ export default {
       ],
     };
   },
-  watch: {
-    colorModeValue() {
-      let faviconLink = document.querySelector("link[rel~='icon']");
-      faviconLink.href = `/${this.colorModeValue}-favicon.ico`;
-    },
+  data() {
+    return {
+      notifications: [],
+    };
   },
   computed: {
     colorModeValue() {
       return this.$colorMode.value;
     },
   },
-  data() {
-    return {
-      notifications: [],
-    };
+  watch: {
+    colorModeValue() {
+      let faviconLink = document.querySelector("link[rel~='icon']");
+      faviconLink.href = `/${this.colorModeValue}-favicon.ico`;
+    },
   },
   mounted() {
     let scrollPosition = window.scrollY;

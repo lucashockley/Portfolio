@@ -3,10 +3,10 @@
     <div data-aos="fade-up">
       <div class="text-2xl md:text-3xl max-w-3xl">
         <h1
-          @mouseenter="animateWave = true"
-          :class="{ wave: animateWave }"
-          class="text-4xl w-min select-none"
           ref="hand"
+          @mouseenter="animateWaveEmoji = true"
+          :class="{ wave: animateWaveEmoji }"
+          class="text-4xl w-min select-none"
         >
           👋
         </h1>
@@ -35,20 +35,20 @@
 export default {
   data() {
     return {
-      animateWave: false,
+      animateWaveEmoji: false,
     };
   },
   mounted() {
     this.$refs.hand.addEventListener('animationend', () => {
-      this.animateWave = false;
+      this.animateWaveEmoji = false;
     });
 
     setTimeout(() => {
-      this.animateWave = true;
+      this.animateWaveEmoji = true;
     }, 800);
 
     setInterval(() => {
-      this.animateWave = true;
+      this.animateWaveEmoji = true;
     }, 5000);
   },
 };

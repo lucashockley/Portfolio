@@ -1,10 +1,10 @@
 <template>
   <div
-    class="screenshot-window"
-    :class="right ? 'right xl:ml-4' : 'left xl:-ml-4'"
     :data-aos="right ? 'rotate-right' : 'rotate-left'"
     data-aos-duration="400"
     :data-aos-anchor="`#${project.slug}`"
+    :class="right ? 'right xl:ml-4' : 'left xl:-ml-4'"
+    class="screenshot-window"
   >
     <div class="window-bar">
       <div class="mac-window-icon"></div>
@@ -17,11 +17,11 @@
 
       <transition name="fade">
         <img
-          v-show="loaded"
-          class="h-full object-cover w-full rounded-b z-10 absolute"
-          @load="loaded = true"
+          v-show="imageLoaded"
+          @load="imageLoaded = true"
           :src="require(`~/assets/img/${project.slug}-screenshot.png`)"
           alt="Project Screenshot"
+          class="h-full object-cover w-full rounded-b z-10 absolute"
         />
       </transition>
     </a>
@@ -30,10 +30,13 @@
 
 <script>
 export default {
-  props: ['project', 'right'],
+  props: {
+    project: Object,
+    right: Boolean,
+  },
   data() {
     return {
-      loaded: false,
+      imageLoaded: false,
     };
   },
 };
@@ -80,12 +83,10 @@ export default {
 
 @media only screen and (min-width: 1280px) {
   .screenshot-window.left:hover {
-    /* transform: rotateY(14deg) rotateX(6deg); */
     transform: rotateY(14deg);
   }
 
   .screenshot-window.right:hover {
-    /* transform: rotateY(-14deg) rotateX(6deg); */
     transform: rotateY(-14deg);
   }
 
@@ -94,7 +95,6 @@ export default {
   }
 
   [data-aos='rotate-right'].aos-animate {
-    /* transform: rotateY(-10deg) rotateX(6deg); */
     transform: rotateY(-10deg);
   }
 
@@ -103,7 +103,6 @@ export default {
   }
 
   [data-aos='rotate-left'].aos-animate {
-    /* transform: rotateY(10deg) rotateX(6deg); */
     transform: rotateY(10deg);
   }
 }

@@ -3,13 +3,14 @@
     <div
       v-for="notification in notifications.slice().reverse()"
       :key="notification.id"
-      class="notification bg-gray-800"
       :class="{
         'bg-success': notification.success,
         'bg-red-500': notification.error,
       }"
+      class="notification bg-gray-800"
     >
       <span>{{ notification.content }}</span>
+
       <button @click="removeNotification(notification.id)" class="material-icons-round close-icon">
         close
       </button>
@@ -19,7 +20,10 @@
 
 <script>
 export default {
-  props: ['notifications', 'removeNotification'],
+  props: {
+    notifications: Array,
+    removeNotification: Function,
+  },
 };
 </script>
 

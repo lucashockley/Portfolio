@@ -32,22 +32,12 @@
         >
           <div
             v-for="(technology, index) in technologies"
+            :key="technology"
             data-aos="fade-up"
             :data-aos-delay="index * 100"
-            :key="technology"
+            class="text-gray-600 dark:text-white"
           >
-            <div
-              class="
-                bg-gray-100
-                dark:bg-gray-800
-                py-2
-                px-4
-                rounded
-                duration-300
-                text-gray-600
-                dark:text-white
-              "
-            >
+            <div class="bg-gray-100 dark:bg-gray-800 py-2 px-4 rounded duration-300">
               {{ technology }}
             </div>
           </div>

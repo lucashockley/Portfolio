@@ -9,18 +9,9 @@
 
 <script>
 export default {
-  data() {
-    return {
-      colourModes: ['light', 'dark', 'system'],
-    };
-  },
   methods: {
     changeColourMode() {
-      if (this.$colorMode.value === 'light') {
-        this.$colorMode.preference = 'dark';
-      } else {
-        this.$colorMode.preference = 'light';
-      }
+      this.$colorMode.preference = this.$colorMode.value === 'light' ? 'dark' : 'light';
     },
   },
 };

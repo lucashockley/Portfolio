@@ -50,7 +50,10 @@
 
 <script>
 export default {
-  props: ['project', 'right'],
+  props: {
+    project: Object,
+    right: Boolean,
+  },
 };
 </script>
 
