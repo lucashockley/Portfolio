@@ -198,6 +198,10 @@ form .input:focus {
   @apply border-blue-400;
 }
 
+form textarea {
+  min-height: 5rem;
+}
+
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 200ms;
