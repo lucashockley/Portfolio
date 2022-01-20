@@ -60,6 +60,7 @@ export default {
         'Express',
         'Netlify',
         'Strapi',
+        'MongoDB',
       ],
     };
   },
