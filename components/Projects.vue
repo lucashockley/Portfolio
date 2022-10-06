@@ -27,13 +27,13 @@ export default {
           technologies: ['Vue', 'Nuxt', 'Express', 'MongoDB'],
           url: 'https://typetest.io/',
         },
-        {
-          name: "Shu's Money Crew",
-          slug: 'shus-money-crew',
-          info: "A completely bespoke site for an esports team, harnessing Shopify's Storefront API to power an integrated ecommerce store.",
-          technologies: ['Vue', 'Nuxt', 'Shopify Storefront API', 'Strapi'],
-          url: 'https://shusmoneycrew.com',
-        },
+        // {
+        //   name: "Shu's Money Crew",
+        //   slug: 'shus-money-crew',
+        //   info: "A completely bespoke site for an esports team, harnessing Shopify's Storefront API to power an integrated ecommerce store.",
+        //   technologies: ['Vue', 'Nuxt', 'Shopify Storefront API', 'Strapi'],
+        //   url: 'https://shusmoneycrew.com',
+        // },
         {
           name: 'Othell.io',
           slug: 'othell-io',

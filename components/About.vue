@@ -5,15 +5,15 @@
     <div class="text-container">
       <div class="about-main-content">
         <p data-aos="fade-up">
-          I'm Lucas Hockley, and I'm a 19 year old student from Cambridgeshire. Currently I'm
+          I'm Lucas Hockley, and I'm a 20 year old student from Cambridgeshire. Currently I'm
           studying Computer Science at the University of Leeds, and I've been doing web development
-          in my own time for just over 2 years now.
+          in my own time since 2019.
         </p>
 
         <p data-aos="fade-up">
           I work on everything from the design of a site, all the way through to deploying it for
-          the world to see. Frontend engineering is certainly what I'm best at; I love the mix of
-          creativity and problem solving that brings a site to life.
+          the world to see. Frontend engineering is certainly what I enjoy the most; I love the mix
+          of creativity and problem solving that brings a site to life.
         </p>
 
         <p data-aos="fade-up">
